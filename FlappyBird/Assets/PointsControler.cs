@@ -7,6 +7,7 @@ public class PointsControler : MonoBehaviour
 {
     public TextMeshProUGUI textField;
     public BirdController birdController;
+    public bool isHighscore;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,13 @@ public class PointsControler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        textField.text = birdController.Points.ToString();
+        if (isHighscore)
+        {
+            textField.text = PlayerPrefs.GetInt("Highscore").ToString();
+        }
+        else
+        {
+            textField.text = birdController.Points.ToString();
+        }
     }
 }
