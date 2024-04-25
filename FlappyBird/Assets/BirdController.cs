@@ -10,6 +10,7 @@ public class BirdController : MonoBehaviour
     public float JumpForce;
 
     public int Points;
+
     public static bool GameOver;
     public static bool HasStarted;
 
